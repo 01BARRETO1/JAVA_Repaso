@@ -38,16 +38,15 @@ public class Item {
 	
 	public void vender(int productosVendidos) {
 		
-		this.productosVendidos=productosVendidos;
-		productosActuales=productosActuales-productosVendidos;
-		productosVendidos+=productosVendidos;		
+		this.productosVendidos+=productosVendidos;
+		this.productosActuales=productosActuales-productosVendidos;
+				
 	}
 	
 	public void devolver(int productosDevueltos) {
-		this.productosDevueltos=productosDevueltos;
-		productosActuales=productosActuales+productosDevueltos;
-		productosVendidos=productosVendidos-productosDevueltos;
-		productosDevueltos+=productosDevueltos+productosDevueltos;
+		this.productosDevueltos+=productosDevueltos;
+		this.productosActuales+=productosDevueltos;
+		this.productosVendidos-=productosDevueltos;
 	}
 	
 }
